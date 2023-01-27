@@ -13,11 +13,7 @@
         "project": ["tsconfig.*?.json"],
         "createDefaultProgram": true
       },
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier"
-      ],
+      "extends": ["plugin:@angular-eslint/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
       "rules": {
         "@angular-eslint/component-class-suffix": [
           "error",
@@ -32,7 +28,10 @@
         "@angular-eslint/component-selector": [
           "error",
           { "type": "element", "prefix": "app", "style": "kebab-case" }
-        ]
+        ],
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@angular-eslint/no-empty-lifecycle-method": "off"
       }
     },
     {
