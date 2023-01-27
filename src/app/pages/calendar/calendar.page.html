@@ -18,23 +18,15 @@
       <mat-select [(value)]="calendarView">
         <mat-option *ngFor="let view of views" [value]="view.value">{{view.label}}</mat-option>
       </mat-select>
-      <!-- <select matNativeControl required>
-        <option *ngFor="let view of views" [value]="view.value">{{view.label}}</option>
-      </select> -->
     </mat-form-field>
   </mat-toolbar>
-  <!-- <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened> -->
   <div class="main-content">
     <mat-card class="calendar-card">
       <mat-calendar [(selected)]="selectedDate"></mat-calendar>
     </mat-card>
-    <!-- </mat-drawer>
-    <mat-drawer-content>Main content</mat-drawer-content>
-  </mat-drawer-container> -->
     <mat-card class="calendar-grid">
       <div *ngFor="let day of dayGrid" class="day-grids">
-        <mat-card>{{day.details.label}}</mat-card>
+        <mat-card class="day-grid">{{day.details.label}}</mat-card>
         <mat-card class="day-grid" *ngFor="let hour of day.grid"></mat-card>
       </div>
     </mat-card>
